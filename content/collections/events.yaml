@@ -1,0 +1,17 @@
+title: Events
+icon: calendar-date
+template: events/show
+layout: layout
+mount: f4b1d5d4-1eb2-4c73-84b4-921a0647f5d6
+revisions: false
+route: '/events/{slug}-{year}-{month}-{day}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: unlisted
+  future: public
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

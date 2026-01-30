@@ -1,0 +1,142 @@
+title: Page
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Hero
+        collapsible: true
+        fields:
+          -
+            handle: hero_title
+            field:
+              type: text
+              display: 'Hero Title'
+          -
+            handle: hero_subtitle
+            field:
+              type: text
+              display: 'Hero Subtitle'
+          -
+            handle: hero_background
+            field:
+              container: assets
+              mode: grid
+              max_files: 1
+              type: assets
+              display: 'Hero Background'
+          -
+            handle: graffiti
+            field:
+              type: text
+              display: 'Graffiti Style Word'
+      -
+        display: Main
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: page_builder
+            field:
+              type: replicator
+              display: 'Page Builder'
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    heading:
+                      display: Heading
+                      icon: text-formatting-image-top
+                      fields:
+                        -
+                          handle: heading_text
+                          field:
+                            buttons:
+                              - bold
+                              - italic
+                            container: assets
+                            remove_empty_nodes: false
+                            type: bard
+                            display: 'Heading Text'
+                    content_block:
+                      display: 'Content Block'
+                      icon: text-formatting-wrap-image-right
+                      fields:
+                        -
+                          handle: block_content
+                          field:
+                            buttons:
+                              - bold
+                              - italic
+                              - anchor
+                            container: assets
+                            save_html: true
+                            remove_empty_nodes: false
+                            type: bard
+                            display: 'Block Content'
+                        -
+                          handle: illustration
+                          field:
+                            container: assets
+                            max_files: 1
+                            type: assets
+                            display: Illustration
+                        -
+                          handle: eyebrow_text
+                          field:
+                            type: text
+                            display: 'Eyebrow Text'
+                    gallery:
+                      display: Gallery
+                      icon: media-image-picture-gallery
+                      fields:
+                        -
+                          handle: gallery_images
+                          field:
+                            container: assets
+                            type: assets
+                            display: 'Gallery Images'
+                    section_break:
+                      display: 'Section Break'
+                      icon: orientation-image-picture-horizontal-landscape
+                      fields:
+                        -
+                          handle: icon
+                          field:
+                            container: assets
+                            max_files: 1
+                            type: assets
+                            display: Icon
+      -
+        display: System
+        collapsible: true
+        collapsed: true
+        fields:
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              localizable: true
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

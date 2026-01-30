@@ -1,0 +1,84 @@
+title: Event
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+          -
+            handle: location
+            field:
+              default: 'Gracelife Beachside'
+              type: text
+              display: Location
+          -
+            handle: content
+            field:
+              smart_typography: true
+              container: assets
+              remove_empty_nodes: false
+              type: bard
+              display: Content
+          -
+            handle: add_button
+            field:
+              type: revealer
+              display: 'Add Button'
+          -
+            handle: button_text
+            field:
+              type: text
+              display: 'Button Text'
+              width: 50
+              if:
+                add_button: 'equals true'
+          -
+            handle: button_url
+            field:
+              collections:
+                - events
+                - pages
+              type: link
+              display: 'Button URL'
+              width: 50
+              if:
+                add_button: 'equals true'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+              time_enabled: true
+          -
+            handle: end_time
+            field:
+              type: time
+              display: 'End Time'
+              instructions: Optional

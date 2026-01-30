@@ -1,0 +1,14 @@
+@props([
+    'class' => ''
+])
+
+
+<section class="max-w-7xl mx-auto px-6 {{ $class }}">
+    {{ page_builder }}
+
+    {{ if set == "heading" }}
+        <h1 class="font-serif text-[54px] leading-none text-center">{{ heading_text }}</h1>
+    {{ /if }}
+
+    {{ /page_builder }}
+</section>

@@ -1,0 +1,36 @@
+<section class="max-w-7xl mx-auto px-6 py-24">
+    {{ page_builder }}
+
+    {{ if type == "heading" }}
+        <h1 class="font-serif text-[54px] leading-none text-center">{{ heading_text }}</h1>
+    {{ /if }}
+
+    {{ if type == "content_block" }}
+        <div class="flex items-center nth-of-type-1:flex-row-reverse nth-of-type-3:flex-row-reverse nth-of-type-5:flex-row-reverse gap-8 justify-between py-24">
+            <div class="w-2/3">
+                <div class="font-hand text-2xl mb-4">{{ $eyebrow_text }}</div>
+                <div class="text-5xl font-light font-serif">
+                    {{ block_content }}
+                </div>
+            </div>
+            <div>
+                <img src="{{ illustration:url }}" alt="{{ illustration:alt }}" width="320" height="320" />
+            </div>
+        </div>
+    {{ /if }}
+
+    {{ if type == "gallery" }}
+        <div class="flex items-center justify-center gap-8 py-24">
+            {{ gallery_images }}
+                {{? $rotation = random_from_array([-4, -3, -2, -1, 0, 1, 2, 3, 4])  ?}}
+                <img src="{{ url }}" alt="{{ alt }}" class="rounded-3xl h-[400px] w-[240px] object-cover -mx-10" style="transform: rotate({{ $rotation }}deg);" />
+            {{ /gallery_images }}
+        </div>
+    {{ /if }}
+
+    {{ if type == "section_break" }}
+        {{ icon:url }}
+    {{ /if }}
+
+    {{ /page_builder }}
+</section>

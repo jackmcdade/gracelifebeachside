@@ -1,0 +1,13 @@
+name: 'Jack McDade'
+super: true
+id: 7081277f-8794-4f0c-a519-187db99b94ae
+password_hash: $2y$12$66Vj26fqO/7PRhNLqJ1UPuqA0ySGi376vjN1SaiV8ZEJ.ygHmkrOO
+preferences:
+  color_mode: light
+  collections:
+    pages:
+      view: tree
+      after_save: continue_editing
+    events:
+      view: list
+      after_save: continue_editing

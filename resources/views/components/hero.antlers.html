@@ -1,0 +1,13 @@
+@props([
+  'title' => 'hello',
+  'graffiti' 'hello',
+  'image' => null
+])
+
+<section class="max-w-7xl mx-auto px-6">
+    <div class="rounded-[42px] bg-brand-blue text-white p-12 flex flex-col justify-center py-20 overflow-hidden {{ $class }}" style="background-image: url('{{ $image }}'); background-size: cover; background-position: center;">
+        <h1 class="font-serif text-[200px] text-shadow-[10px_10px_0_hsla(220,29%,8%,0.15)] leading-none text-white font-bold text-center">{{ $title }}</h1>
+        {{# <div class="absolute opacity-10 text-[200px] -rotate-10 inset-0 text-center">{{ $graffiti }}</div> #}}
+        {{ $slot }}
+    </div>
+</section>
