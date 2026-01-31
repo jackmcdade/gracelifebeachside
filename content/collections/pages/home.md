@@ -8,8 +8,13 @@ hero_subtitle: 'Welcome to Gracelife Beachside — a safe place to rethink your 
 hero_background: homepage-hero.jpg
 graffiti: refuge
 updated_by: 7081277f-8794-4f0c-a519-187db99b94ae
-updated_at: 1769879385
+updated_at: 1769898075
 page_builder:
+  -
+    id: ml2vltus
+    icon: icons/shell-breaker.svg
+    type: section_break
+    enabled: true
   -
     id: ml1c2ml0
     heading_text:
