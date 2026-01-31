@@ -2,6 +2,7 @@
 @plugin "@tailwindcss/typography";
 @source "../views";
 @source "../../content";
+@source "../js/components";
 
 @theme {
   --font-sans: 'stratos', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

@@ -17,4 +17,9 @@ export default defineConfig({
             ignored: ['**/storage/framework/views/**'],
         },
     },
+    resolve: {
+        alias: {
+            vue: 'vue/dist/vue.esm-bundler.js',
+        },
+    },
 });

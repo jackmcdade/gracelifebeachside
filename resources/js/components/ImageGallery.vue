@@ -1,5 +1,5 @@
 <template>
-    <div v-if="normalizedImages.length > 0" class="flex items-center justify-center gap-8 py-24 relative" style="display: flex; align-items: center; justify-content: center; gap: 2rem; padding: 6rem 0; position: relative;">
+    <div v-if="normalizedImages.length > 0" class="flex items-center justify-center gap-8 py-24 relative">
         <div
             v-for="(image, index) in normalizedImages"
             :key="index"
@@ -7,8 +7,7 @@
             :style="{
                 transform: getTransform(index),
                 zIndex: getZIndex(index),
-                transition: 'transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), z-index 0s',
-                position: 'relative'
+                transition: 'transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), z-index 0s'
             }"
             @mouseenter="handleMouseEnter(index)"
             @mouseleave="handleMouseLeave()"
@@ -16,14 +15,12 @@
             <div
                 class="rounded-3xl overflow-hidden -mx-10 transition-all duration-500"
                 :class="isHovered(index) ? 'shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] ring-4 ring-white/20' : 'shadow-2xl'"
-                style="border-radius: 1.5rem; overflow: hidden; margin: 0 -2.5rem; transition: all 0.5s;"
             >
                 <img
                     :src="image.url"
                     :alt="image.alt || ''"
                     class="rounded-3xl h-[400px] w-[240px] object-cover cursor-pointer transition-all duration-500"
                     :class="isHovered(index) ? 'brightness-105' : ''"
-                    style="border-radius: 1.5rem; height: 400px; width: 240px; object-fit: cover; cursor: pointer; transition: all 0.5s;"
                 />
             </div>
         </div>
@@ -54,25 +51,15 @@ const parsedImages = computed(() => {
     }
 })
 
-// Normalize images to handle different formats from Statamic
+// Normalize images - Statamic already provides url and alt
 const normalizedImages = computed(() => {
     if (!Array.isArray(parsedImages.value) || parsedImages.value.length === 0) {
         return []
     }
-
-    return parsedImages.value.map(img => {
-        // Handle Statamic asset objects - they might have url, path, or be a string
-        let url = null
-        if (typeof img === 'string') {
-            url = img
-        } else if (img && typeof img === 'object') {
-            url = img.url || img.path || img.permalink || null
-        }
-
-        const alt = (img && typeof img === 'object') ? (img.alt || img.alt_text || '') : ''
-
-        return { url, alt }
-    }).filter(img => img.url) // Filter out any without URLs
+    return parsedImages.value.map(img => ({
+        url: img.url,
+        alt: img.alt || ''
+    }))
 })
 
 const hoveredIndex = ref(null)

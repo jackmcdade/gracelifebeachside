@@ -20,7 +20,7 @@
         {{ /if }}
 
         {{ if type == "gallery" }}
-            <image-gallery images='{{ gallery_images | json }}'></image-gallery>
+            <image-gallery :images='{{ gallery_images | json }}'></image-gallery>
         {{ /if }}
 
         {{ if type == "section_break" }}

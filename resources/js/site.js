@@ -1,8 +1,9 @@
-import { defineCustomElement } from 'vue'
-import ImageGallery from './components/Gallery.vue'
+import { createApp } from 'vue'
+import ImageGallery from './components/ImageGallery.vue'
 
-// Convert Vue component to custom element
-const ImageGalleryElement = defineCustomElement(ImageGallery)
+// Create app and register component globally
+const app = createApp({})
+app.component('image-gallery', ImageGallery)
 
-// Register as custom element (both kebab-case and allow PascalCase in HTML)
-customElements.define('image-gallery', ImageGalleryElement)
+// Mount app
+app.mount('#app')
