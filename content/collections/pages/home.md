@@ -8,7 +8,7 @@ hero_subtitle: 'Welcome to Gracelife Beachside — a safe place to rethink your 
 hero_background: homepage-hero.jpg
 graffiti: refuge
 updated_by: 7081277f-8794-4f0c-a519-187db99b94ae
-updated_at: 1769807629
+updated_at: 1769879385
 page_builder:
   -
     id: ml1c2ml0
@@ -42,11 +42,21 @@ page_builder:
     type: gallery
     enabled: true
   -
+    id: ml2kghr8
+    icon: icons/coral.svg
+    type: section_break
+    enabled: true
+  -
     id: ml1c36uh
     block_content: '<p>First off, we’re <strong>allergic</strong> to “piousbabble”. We talk just like regular people. We don’t <em>echo prayer</em> for <em>traveling mercies</em> or <em>hedges of protection</em>. We simply love the God who created us, follow His teachings, and care for each other.</p>'
-    illustration: shaka.png
+    illustration: shaka.svg
     eyebrow_text: 'We’re a really safe space.'
     type: content_block
+    enabled: true
+  -
+    id: ml2kgz3b
+    icon: icons/oyster.svg
+    type: section_break
     enabled: true
   -
     id: ml1c4m1h
@@ -56,8 +66,13 @@ page_builder:
     type: content_block
     enabled: true
   -
+    id: ml2khbvw
+    icon: icons/coral.svg
+    type: section_break
+    enabled: true
+  -
     id: ml1cyg80
-    block_content: '<p>You may find the preaching and teaching to be…not what you’d expect. Philosophical — at times. Humorous — often. Gospel-centered — always. Suits and ties — never. We wear flip flops, play the drums, and baptize in the ocean. Wanna join us?</p>'
+    block_content: '<p>You may find the preaching and teaching to be…not what you’d expect. <strong>Philosophical</strong> — at times. <strong>Humorous</strong> — often. <strong>Gospel-centered </strong>— always. <strong>Suits and ties </strong>— never. We wear flip flops, play the drums, and baptize in the ocean. Wanna join us?</p>'
     illustration: welcome-board.png
     eyebrow_text: 'Curious about our teaching?'
     type: content_block

@@ -12,5 +12,11 @@
   --color-parchment: #FCFCF7;
   --color-coral: #E88873;
   --color-brand-blue: #008CB2;
+
+  --container-8xl: 88rem;
+}
+
+body {
+    background-image: url('/resources/img/parchment.webp');
 }
 

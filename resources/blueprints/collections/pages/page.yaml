@@ -4,6 +4,16 @@ tabs:
     display: Main
     sections:
       -
+        display: Main
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+      -
         display: Hero
         collapsible: true
         fields:
@@ -31,15 +41,8 @@ tabs:
               type: text
               display: 'Graffiti Style Word'
       -
-        display: Main
+        display: Content
         fields:
-          -
-            handle: title
-            field:
-              type: text
-              required: true
-              validate:
-                - required
           -
             handle: page_builder
             field:
@@ -112,23 +115,6 @@ tabs:
                             max_files: 1
                             type: assets
                             display: Icon
-      -
-        display: System
-        collapsible: true
-        collapsed: true
-        fields:
-          -
-            handle: content
-            field:
-              type: markdown
-              display: Content
-              localizable: true
-          -
-            handle: template
-            field:
-              type: template
-              display: Template
-              localizable: true
   sidebar:
     display: Sidebar
     sections:
@@ -140,3 +126,9 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
