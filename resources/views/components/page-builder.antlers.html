@@ -20,11 +20,72 @@
         {{ /if }}
 
         {{ if type == "gallery" }}
-            <div class="flex items-center justify-center gap-8 py-24">
+            <div
+                x-data="{
+                    hoveredIndex: null,
+                    handleMouseEnter(index) {
+                        this.hoveredIndex = index;
+                    },
+                    handleMouseLeave() {
+                        this.hoveredIndex = null;
+                    },
+                    getTransform(index, baseRotation, baseShift) {
+                        if (this.hoveredIndex === null) {
+                            return `rotate(${baseRotation}deg) translateY(${baseShift}px)`;
+                        }
+
+                        const hovered = this.hoveredIndex;
+                        const distance = index - hovered;
+                        const absDistance = Math.abs(distance);
+
+                        if (distance === 0) {
+                            return 'scale(1.15) translateY(-20px)';
+                        }
+
+                        const spread = absDistance * 60;
+                        const direction = distance > 0 ? 1 : -1;
+                        const rotation = direction * Math.min(absDistance * 2, 8);
+
+                        return `translateX(${direction * spread}px) rotate(${rotation}deg) scale(0.95)`;
+                    },
+                    getZIndex(index) {
+                        if (this.hoveredIndex === null) return 1;
+                        return index === this.hoveredIndex ? 10 : 1;
+                    },
+                    isHovered(index) {
+                        return this.hoveredIndex === index;
+                    }
+                }"
+                class="flex items-center justify-center gap-8 py-24 relative"
+            >
+                {{? $imgIndex = 0 ?}}
                 {{ gallery_images }}
                     {{? $rotation = random_from_array([-4, -3, -2, -1, 0, 1, 2, 3, 4])  ?}}
                     {{? $shift = random_from_array([-8, -6, -4, -2, 0, 2, 4, 6, 8])  ?}}
-                    <img src="{{ url }}" alt="{{ alt }}" class="rounded-3xl h-[400px] w-[240px] object-cover -mx-10" style="transform: rotate({{ $rotation }}deg); translate: 0 {{ $shift }}px;" />
+                    <div
+                        class="gallery-image relative"
+                        :data-index="{{ $imgIndex }}"
+                        :style="`
+                            transform: ${getTransform({{ $imgIndex }}, {{ $rotation }}, {{ $shift }})};
+                            z-index: ${getZIndex({{ $imgIndex }})};
+                            transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), z-index 0s;
+                        `"
+                        @mouseenter="handleMouseEnter({{ $imgIndex }})"
+                        @mouseleave="handleMouseLeave()"
+                    >
+                        <div
+                            class="rounded-3xl overflow-hidden -mx-10 transition-all duration-500"
+                            :class="isHovered({{ $imgIndex }}) ? 'shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] ring-4 ring-white/20' : 'shadow-2xl'"
+                        >
+                            <img
+                                src="{{ url }}"
+                                alt="{{ alt }}"
+                                class="rounded-3xl h-[400px] w-[240px] object-cover cursor-pointer transition-all duration-500"
+                                :class="isHovered({{ $imgIndex }}) ? 'brightness-105' : ''"
+                            />
+                        </div>
+                    </div>
+                    {{? $imgIndex = $imgIndex + 1 ?}}
                 {{ /gallery_images }}
             </div>
         {{ /if }}
