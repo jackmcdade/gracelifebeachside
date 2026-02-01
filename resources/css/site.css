@@ -4,11 +4,21 @@
 @source "../../content";
 @source "../js/components";
 
+@font-face {
+  font-family: 'gojira';
+  src: url('../fonts/gojira-black.woff2') format('woff2'),
+       url('../fonts/gojira-black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --font-sans: 'stratos', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: 'new-spirit-condensed',ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --font-hand: 'caveat', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-brush: 'gojira', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   --color-parchment: #FCFCF7;
   --color-coral: #E88873;
@@ -21,3 +31,10 @@ body {
     background-image: url('/resources/img/parchment.webp');
 }
 
+@utility shape-squircle {
+    corner-shape: squircle;
+}
+
+@utility text-trim {
+    text-box: trim-both cap alphabetic;
+}

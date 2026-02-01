@@ -5,10 +5,10 @@ title: Home
 template: home
 hero_title: 'Find Refuge.'
 hero_subtitle: 'Welcome to Gracelife Beachside — a safe place to rethink your life and explore a relationship with Jesus.'
-hero_background: homepage-hero.jpg
+hero_background: gracelife-building.jpg
 graffiti: refuge
 updated_by: 7081277f-8794-4f0c-a519-187db99b94ae
-updated_at: 1769898075
+updated_at: 1769971747
 page_builder:
   -
     id: ml2vltus

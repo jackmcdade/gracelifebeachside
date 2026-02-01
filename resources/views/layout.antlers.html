@@ -20,7 +20,9 @@
             <nav>
                 <ul class="flex items-center gap-12 uppercase text-xl">
                     {{ nav:collection:pages slug:not="give" }}
-                        <li><a href="{{ url }}">{{ title }}</a></li>
+                        <li>
+                            <a href="{{ url }}" class="hover:text-coral transition-colors {{ is_current ?= 'text-coral border-b-3 border-coral' }}">{{ title }}</a>
+                        </li>
                     {{ /nav:collection:pages }}
                 </ul>
             </nav>

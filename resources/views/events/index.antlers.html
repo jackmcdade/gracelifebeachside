@@ -1,17 +1,3 @@
-<header class="max-w-7xl mx-auto px-6 h-28 flex items-center justify-between">
-    <a href="/">
-        <img src="/assets/gracelife-beachside-logo.png" alt="Gracelife Beachside Logo" width="200" />
-    </a>
-    <nav>
-        <ul class="flex items-center gap-12 uppercase text-xl">
-            {{ nav:collection:pages slug:not="give" }}
-                <li><a href="{{ url }}">{{ title }}</a></li>
-            {{ /nav:collection:pages }}
-        </ul>
-    </nav>
-    <x-button>Give</x-button>
-</header>
-
 <x-hero
     :title="hero_title"
     :graffiti="graffiti"

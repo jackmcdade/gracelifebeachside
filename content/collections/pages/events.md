@@ -4,9 +4,9 @@ blueprint: page
 title: Events
 author: 7081277f-8794-4f0c-a519-187db99b94ae
 updated_by: 7081277f-8794-4f0c-a519-187db99b94ae
-updated_at: 1769808123
+updated_at: 1769978624
 template: events/index
 hero_title: Events
-hero_background: events-hero.jpg
+hero_background: church-around-the-table-bentzels.jpg
 graffiti: events
 ---
