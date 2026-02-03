@@ -38,3 +38,7 @@ body {
 @utility text-trim {
     text-box: trim-both cap alphabetic;
 }
+
+@utility rough {
+    filter: url(#rough);
+}

@@ -9,7 +9,9 @@
 <section class="max-w-3xl mx-auto text-center py-16">
     <div class="font-hand text-2xl">Hey look, a calendar!</div>
     <h2 class="font-serif text-6xl font-light pb-4">Here's what's going on at Gracelife.</h2>
-    <hr />
+
+    <div class="h-1 bg-black w-full rough"></div>
+
     <div class="py-16 flex flex-col gap-8">
         {{ collection from="events" }}
             <a href="{{ url }}" class="border rounded-xl p-3 gap-6 flex items-center">
