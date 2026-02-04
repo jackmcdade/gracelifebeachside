@@ -82,3 +82,4 @@ tabs:
               type: time
               display: 'End Time'
               instructions: Optional
+              augment_format: 'g:ia'

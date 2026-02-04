@@ -25,7 +25,7 @@
                     </div>
                         <div class="font-serif leading-none text-mlg md:text-[20px] font-light">
                         {{ date | format('g:ia') }}
-                        {{ if end_time }}&ndash; {{ end_time | timezone | format('g:ia') }}{{ /if }}
+                        {{ if end_time }}&ndash; {{ end_time }}{{ /if }}
                         {{ if location }}@ {{ location }}{{ /if }}
                         </div>
                 </div>
