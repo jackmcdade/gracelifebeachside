@@ -24,7 +24,11 @@
 
         {{ if type == "gallery" }}
             <div class="py-8">
-                <image-gallery :images='{{ gallery_images | json }}'></image-gallery>
+                <image-gallery>
+                    {{ gallery_images }}
+                        <img src="{{ glide:url height="800" width="480" }}" alt="{{ alt }}" />
+                    {{ /gallery_images }}
+                </image-gallery>
             </div>
         {{ /if }}
 

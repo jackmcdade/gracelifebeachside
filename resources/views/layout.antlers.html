@@ -12,8 +12,8 @@
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.6/dist/cdn.min.js"></script>
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
     </head>
-    <body class="antialiased">
-        <header class="max-w-8xl mx-auto px-10 h-28 flex items-center justify-between">
+    <body class="antialiased font-serif">
+        <header class="max-w-8xl mx-auto px-10 h-28 flex items-center justify-between font-sans">
             <a href="/">
                 <img src="/assets/gracelife-beachside-logo.png" alt="Gracelife Beachside Logo" width="200" />
             </a>
@@ -26,25 +26,27 @@
                     {{ /nav:collection:pages }}
                 </ul>
             </nav>
-            <x-button>Give</x-button>
+            <div class="flex items-center justify-end gap-6">
+                <p class="font-hand text-2xl">Sundays @ 10am</p>
+                <x-button>Give</x-button>
+            </div>
         </header>
         <div id="app">
             {{ template_content }}
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="0" width="0">
-            <defs>
-                <filter id="rough">
-                    <feTurbulence
-                        type="fractalNoise"
-                        baseFrequency=".05"
-                        numOctaves="4"
-                    />
-                    <feDisplacementMap
-                        in="SourceGraphic"
-                        scale="4"
-                    />
-                </filter>
-            </defs>
-        </svg>
+        <footer class="pt-16">
+            <div class="h-1 bg-black rough w-full"></div>
+            <div class="max-w-8xl mx-auto px-10 h-28 flex items-center justify-between text-2xl">
+                <div>
+                    <p>&copy; Copyright {{ now | format('Y') }} Gracelife Beachside Church</p>
+                    <p class="font-semibold">Sundays @ 10am</p>
+                </div>
+                <div class="text-right">
+                    <div><a href="">6 Sandra Dr. Ormond Beach, FL 32176</a></div>
+                    <div><a href="tel:3864412133" class="font-semibold">(386) 441-2133</a></div>
+                </div>
+            </div>
+        </footer>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="0" width="0"><defs><filter id="rough"><feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="4"/><feDisplacementMap in="SourceGraphic" scale="4" /></filter></defs></svg>
     </body>
 </html>

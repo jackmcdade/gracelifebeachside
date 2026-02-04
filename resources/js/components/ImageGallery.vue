@@ -25,43 +25,16 @@
             </div>
         </div>
     </div>
+    <div ref="slotContainer" class="hidden">
+        <slot />
+    </div>
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted } from 'vue'
 
-const props = defineProps({
-    images: {
-        type: [String, Array],
-        required: true,
-        default: () => []
-    }
-})
-
-// Parse images from JSON string or use array directly
-const parsedImages = computed(() => {
-    if (Array.isArray(props.images)) {
-        return props.images
-    }
-    try {
-        return JSON.parse(props.images || '[]')
-    } catch (e) {
-        console.error('Failed to parse images:', e)
-        return []
-    }
-})
-
-// Normalize images - Statamic already provides url and alt
-const normalizedImages = computed(() => {
-    if (!Array.isArray(parsedImages.value) || parsedImages.value.length === 0) {
-        return []
-    }
-    return parsedImages.value.map(img => ({
-        url: img.url,
-        alt: img.alt || ''
-    }))
-})
-
+const slotContainer = ref(null)
+const normalizedImages = ref([])
 const hoveredIndex = ref(null)
 const baseRotations = ref([])
 const baseShifts = ref([])
@@ -70,10 +43,20 @@ const rotations = [-4, -3, -2, -1, 0, 1, 2, 3, 4]
 const shifts = [-8, -6, -4, -2, 0, 2, 4, 6, 8]
 
 onMounted(() => {
-    normalizedImages.value.forEach(() => {
-        baseRotations.value.push(rotations[Math.floor(Math.random() * rotations.length)])
-        baseShifts.value.push(shifts[Math.floor(Math.random() * shifts.length)])
-    })
+    // Parse images from slot
+    if (slotContainer.value) {
+        const imgTags = slotContainer.value.querySelectorAll('img')
+        normalizedImages.value = Array.from(imgTags).map(img => ({
+            url: img.getAttribute('src') || '',
+            alt: img.getAttribute('alt') || ''
+        })).filter(img => img.url) // Filter out any images without a URL
+
+        // Initialize rotations and shifts
+        normalizedImages.value.forEach(() => {
+            baseRotations.value.push(rotations[Math.floor(Math.random() * rotations.length)])
+            baseShifts.value.push(shifts[Math.floor(Math.random() * shifts.length)])
+        })
+    }
 })
 
 const handleMouseEnter = (index) => {
