@@ -1,29 +1,29 @@
 <x-hero
     :title="hero_title"
     :graffiti="graffiti"
-    class="h-[380px]"
+    class="lg:h-[380px]"
     :image="hero_background:url"
 >
 </x-hero>
 
-<section class="max-w-3xl mx-auto text-center py-16">
-    <div class="font-hand text-2xl">Hey look, a calendar!</div>
-    <h2 class="font-serif text-6xl font-light pb-4">Here's what's going on at Gracelife.</h2>
+<section class="max-w-3xl mx-auto text-center py-8 sm:py-12 lg:py-16">
+    <div class="font-hand text-xl lg:text-2xl">Hey look, a calendar!</div>
+    <h2 class="font-serif text-4xl lg:text-6xl text-balance font-light pb-4">Here's what's going on at Gracelife.</h2>
 
     <div class="h-1 bg-black w-full rough"></div>
 
-    <div class="py-16 flex flex-col gap-8">
+    <div class="py-8 lg:py-16 flex flex-col gap-3 md:gap-8 px-2">
         {{ collection from="events" }}
             <a href="{{ url }}" class="border rounded-xl p-3 gap-6 flex items-center">
                 <div>
                     <div class="font-hand leading-none text-lg">{{ date | format('l') }}</div>
-                    <div class="font-serif leading-none text-2xl">{{ date | format('M j')}}</div>
+                    <div class="font-serif leading-none text-xl md:text-2xl whitespace-nowrap">{{ date | format('M j')}}</div>
                 </div>
                 <div>
                     <div class="flex-1 text-start leading-none font-serif text-[26px]">
                         {{ title }}
                     </div>
-                        <div class="font-serif leading-none text-[20px] font-light">
+                        <div class="font-serif leading-none text-mlg md:text-[20px] font-light">
                         {{ date | format('g:ia') }}
                         {{ if end_time }}&ndash; {{ end_time | timezone | format('g:ia') }}{{ /if }}
                         {{ if location }}@ {{ location }}{{ /if }}

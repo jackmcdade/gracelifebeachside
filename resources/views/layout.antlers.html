@@ -13,12 +13,12 @@
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
     </head>
     <body class="antialiased font-serif">
-        <header class="max-w-8xl mx-auto px-10 h-28 flex items-center justify-between font-sans">
+        <header class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10 h-20 sm:h-24 lg:h-28 flex flex-col sm:flex-row items-center justify-between font-sans gap-4 sm:gap-0">
             <a href="/">
-                <img src="/assets/gracelife-beachside-logo.png" alt="Gracelife Beachside Logo" width="200" />
+                <img src="/assets/gracelife-beachside-logo.png" alt="Gracelife Beachside Logo" width="200" class="w-32 sm:w-40 lg:w-[200px]" />
             </a>
-            <nav>
-                <ul class="flex items-center gap-12 uppercase text-xl">
+            <nav class="order-3 sm:order-2 w-full sm:w-auto">
+                <ul class="flex items-center justify-center sm:justify-start gap-4 sm:gap-6 lg:gap-12 uppercase text-sm sm:text-base lg:text-xl flex-wrap">
                     {{ nav:collection:pages slug:not="give" }}
                         <li>
                             <a href="{{ url }}" class="hover:text-coral transition-colors {{ is_current ?= 'text-coral border-b-3 border-coral' }}">{{ title }}</a>
@@ -26,22 +26,22 @@
                     {{ /nav:collection:pages }}
                 </ul>
             </nav>
-            <div class="flex items-center justify-end gap-6">
-                <p class="font-hand text-2xl">Sundays @ 10am</p>
+            <div class="flex items-center justify-center sm:justify-end gap-3 sm:gap-4 lg:gap-6 order-2 sm:order-3">
+                <p class="font-hand text-base sm:text-lg lg:text-2xl hidden sm:block">Sundays @ 10am</p>
                 <x-button>Give</x-button>
             </div>
         </header>
         <div id="app">
             {{ template_content }}
         </div>
-        <footer class="pt-16">
+        <footer class="pt-8 sm:pt-12 lg:pt-16">
             <div class="h-1 bg-black rough w-full"></div>
-            <div class="max-w-8xl mx-auto px-10 h-28 flex items-center justify-between text-2xl">
-                <div>
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10 py-8 sm:py-12 lg:py-0 lg:h-28 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 sm:gap-4 text-lg lg:text-2xl">
+                <div class="text-center sm:text-left w-full sm:w-auto">
                     <p>&copy; Copyright {{ now | format('Y') }} Gracelife Beachside Church</p>
                     <p class="font-semibold">Sundays @ 10am</p>
                 </div>
-                <div class="text-right">
+                <div class="text-center sm:text-right order-first sm:order-last w-full sm:w-auto">
                     <div><a href="">6 Sandra Dr. Ormond Beach, FL 32176</a></div>
                     <div><a href="tel:3864412133" class="font-semibold">(386) 441-2133</a></div>
                 </div>

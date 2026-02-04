@@ -8,7 +8,7 @@ hero_subtitle: 'Welcome to Gracelife Beachside — a safe place to rethink your 
 hero_background: gracelife-building.jpg
 graffiti: refuge
 updated_by: 7081277f-8794-4f0c-a519-187db99b94ae
-updated_at: 1769982594
+updated_at: 1770233653
 page_builder:
   -
     id: ml2vltus
@@ -43,7 +43,7 @@ page_builder:
       - christakas-care-group.jpg
       - xander-excited.jpg
       - shari-happy.jpg
-      - baptism.jpg
+      - alsion-special.jpg
     type: gallery
     enabled: true
   -
