@@ -14,7 +14,7 @@
     </head>
     <body class="antialiased font-serif">
         <header class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10 h-20 sm:h-24 lg:h-28 flex flex-col sm:flex-row items-center justify-between font-sans gap-4 sm:gap-0">
-            <a href="/" class="hover:brightness-110 transition-all">
+            <a href="/" class="hover:rough-animate">
                 <img src="/assets/gracelife-beachside-logo.png" alt="Gracelife Beachside Logo" width="200" class="w-32 sm:w-40 lg:w-[200px]" />
             </a>
             <nav class="order-3 sm:order-2 w-full sm:w-auto">
@@ -47,6 +47,14 @@
                 </div>
             </div>
         </footer>
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="0" width="0"><defs><filter id="rough"><feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="4"/><feDisplacementMap in="SourceGraphic" scale="4" /></filter></defs></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="0" width="0">
+            <defs>
+                <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="4"/><feDisplacementMap in="SourceGraphic" scale="4" /></filter>
+                <filter id="rough-1"><feTurbulence type="fractalNoise" baseFrequency=".06" numOctaves="4" seed="1"/><feDisplacementMap in="SourceGraphic" scale="3" /></filter>
+                <filter id="rough-2"><feTurbulence type="fractalNoise" baseFrequency=".04" numOctaves="4" seed="2"/><feDisplacementMap in="SourceGraphic" scale="2" /></filter>
+                <filter id="rough-3"><feTurbulence type="fractalNoise" baseFrequency=".06" numOctaves="4" seed="3"/><feDisplacementMap in="SourceGraphic" scale="4" /></filter>
+                <filter id="rough-4"><feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="4" seed="4"/><feDisplacementMap in="SourceGraphic" scale="4" /></filter>
+            </defs>
+        </svg>
     </body>
 </html>
