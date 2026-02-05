@@ -67,6 +67,26 @@ tabs:
                             remove_empty_nodes: false
                             type: bard
                             display: 'Heading Text'
+                            width: 75
+                        -
+                          handle: size
+                          field:
+                            options:
+                              -
+                                key: medium
+                                value: Medium
+                              -
+                                key: large
+                                value: Large
+                            default: medium
+                            type: select
+                            display: Size
+                            width: 25
+                        -
+                          handle: eyebrow_text
+                          field:
+                            type: text
+                            display: 'Eyebrow Text'
                     content_block:
                       display: 'Content Block'
                       icon: text-formatting-wrap-image-right

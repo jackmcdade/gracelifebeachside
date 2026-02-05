@@ -8,7 +8,7 @@ hero_subtitle: 'Welcome to Gracelife Beachside — a safe place to rethink your 
 hero_background: gracelife-building.jpg
 graffiti: refuge
 updated_by: 7081277f-8794-4f0c-a519-187db99b94ae
-updated_at: 1770233653
+updated_at: 1770309856
 page_builder:
   -
     id: ml2vltus
@@ -35,6 +35,7 @@ page_builder:
             text: ' church, just a stone’s throw from the ocean in Ormond Beach. We’re a bit different than most churches. We’d love to show you how.'
     type: heading
     enabled: true
+    size: large
   -
     id: ml1c2vfm
     gallery_images:

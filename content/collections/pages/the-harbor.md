@@ -4,7 +4,7 @@ blueprint: page
 title: 'The Harbor'
 author: 7081277f-8794-4f0c-a519-187db99b94ae
 updated_by: 7081277f-8794-4f0c-a519-187db99b94ae
-updated_at: 1770272439
+updated_at: 1770274788
 hero_title: 'The Harbor'
 hero_background: the-harbor-vintage.jpg
 graffiti: harbor
@@ -29,7 +29,7 @@ page_builder:
     enabled: true
   -
     id: ml92gfa8
-    block_content: "<p>In Matthew 6 he told a group of his followers not to be anxious, but rather to look at the birds of the air and the flowers of the field.\_ While in nature, we are reminded that God cares for the smallest of His creations. If God is able to take such good care of them — we are reminded that we have nothing to fear as He loves us much, much more.</p>"
+    block_content: '<p>In Matthew 6, Jesus tells his followers <strong>not to be anxious</strong>, pointing instead to the birds of the air and the flowers of the field. Nature reminds us that God cares for even the smallest of His creations — and that we have <strong>nothing to fear</strong>, because He loves us much, much more.</p>'
     eyebrow_text: 'Keep this in mind'
     type: content_block
     enabled: true
