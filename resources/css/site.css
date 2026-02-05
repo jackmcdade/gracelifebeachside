@@ -20,9 +20,11 @@
   --font-hand: 'caveat', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-brush: 'gojira', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-  --color-parchment: #FCFCF7;
-  --color-coral: #E88873;
-  --color-brand-blue: #008CB2;
+  --color-parchment: oklch(98.5% 0.008 95);
+  --color-coral-dark: oklch(70% 0.12 35);
+  --color-coral: oklch(73% 0.14 37);
+
+  --color-brand-blue: oklch(57% 0.15 220);
 
   --container-8xl: 88rem;
 }

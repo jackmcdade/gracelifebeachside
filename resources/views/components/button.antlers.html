@@ -1,3 +1,9 @@
-<button class="bg-coral text-white px-8 py-2 rounded-lg uppercase text-xl">
+@props([
+    'href' => null,
+])
+
+{{ $element = $href ? 'a' : 'button' }}
+
+<{{ $element }} href="{{ $href }}" class="bg-coral hover:bg-coral-dark text-white px-8 py-2 rounded-lg uppercase text-xl">
     {{ $slot }}
-</button>
+</{{ $element }}>

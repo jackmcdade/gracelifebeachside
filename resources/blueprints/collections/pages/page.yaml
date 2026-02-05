@@ -23,10 +23,10 @@ tabs:
               type: text
               display: 'Hero Title'
           -
-            handle: hero_subtitle
+            handle: graffiti
             field:
               type: text
-              display: 'Hero Subtitle'
+              display: 'Graffiti Style Word'
           -
             handle: hero_background
             field:
@@ -36,10 +36,11 @@ tabs:
               type: assets
               display: 'Hero Background'
           -
-            handle: graffiti
+            handle: hero_subtitle
             field:
               type: text
-              display: 'Graffiti Style Word'
+              display: 'Hero Subtitle'
+              instructions: 'Only used on the homepage'
       -
         display: Content
         fields:

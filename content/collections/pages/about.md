@@ -4,5 +4,8 @@ blueprint: page
 title: About
 author: 7081277f-8794-4f0c-a519-187db99b94ae
 updated_by: 7081277f-8794-4f0c-a519-187db99b94ae
-updated_at: 1769800022
+updated_at: 1770271869
+hero_title: About
+hero_background: gracelife-building.jpg
+graffiti: about
 ---

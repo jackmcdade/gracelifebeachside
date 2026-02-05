@@ -9,5 +9,8 @@ preferences:
       view: tree
       after_save: continue_editing
     events:
-      view: list
+      view: calendar
       after_save: continue_editing
+  assets:
+    assets:
+      per_page: 25
