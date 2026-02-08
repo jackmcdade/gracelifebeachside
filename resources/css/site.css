@@ -27,10 +27,15 @@
   --color-brand-blue: oklch(57% 0.15 220);
 
   --container-8xl: 88rem;
+  --container-9xl: 96rem;
 }
 
 body {
     background-image: url('/resources/img/parchment.webp');
+}
+
+strong {
+    @apply font-semibold;
 }
 
 @utility shape-squircle {

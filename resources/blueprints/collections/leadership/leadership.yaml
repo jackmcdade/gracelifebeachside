@@ -1,0 +1,48 @@
+title: Leadership
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+              display: 'Full Name'
+          -
+            handle: position
+            field:
+              default: Deacon
+              type: text
+              display: Position
+          -
+            handle: headshot
+            field:
+              container: assets
+              max_files: 1
+              type: assets
+              display: Headshot
+              folder: leadership
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Bio
+              localizable: true
+      -
+        display: 'New Section'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

@@ -11,6 +11,9 @@ preferences:
     events:
       view: calendar
       after_save: continue_editing
+    leadership:
+      view: list
+      after_save: continue_editing
   assets:
     assets:
       per_page: 25
