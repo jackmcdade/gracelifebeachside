@@ -1,4 +1,6 @@
-data: {  }
+data:
+  alt: 'Tom Tacker'
+  focus: 57-32-1.2
 size: 39795
 last_modified: 1770342471
 width: 500

@@ -8,7 +8,7 @@
 
 {{ partial:components/page-builder }}
 
-<section class="max-w-4xl mx-auto flex gap-4 items-center justify-center px-4 py-4 sm:py-6 lg:py-24 text-center">
+<section class="max-w-4xl mx-auto flex gap-4 items-center justify-center px-4 py-6 text-center">
     <x-cta href="/what-we-believe">
         {{ glide src="assets/jack-and-stephen.jpg" width="250" height="140" }}
             <img src="{{ url }}" alt="" class="h-full rounded-sm">
@@ -34,11 +34,11 @@
     </x-cta>
 </section>
 
-<div class="pt-20">
+<div class="pt-16">
     <img src="/assets/icons/rope.svg" alt="" class="h-4 mx-auto" />
 </div>
 
-<section class="max-w-8xl mx-auto px-4 py-4 sm:py-6 lg:py-24 text-center">
+<section class="max-w-8xl mx-auto px-4 py-4 sm:py-6 lg:py-20 text-center">
     <h2 class="font-serif leading-none text-center text-2xl sm:text-3xl lg:text-[42px] font-light mb-4">The Leadership</h2>
     <p class="font-light text-xl">Pastors, Elders, Deacons, and Staff — all pulling a rope for the same vision.</p>
     <div class="grid grid-cols-5 gap-3 max-w-5xl mx-auto py-16">
@@ -54,7 +54,7 @@
     </div>
 </section>
 
-<section class="max-w-7xl mx-auto px-4 py-4 sm:py-6 lg:py-24 text-center">
+<section class="max-w-7xl mx-auto px-4 py-4 sm:py-6 lg:py-20 text-center">
     <h2 class="font-serif leading-none text-center text-2xl sm:text-3xl lg:text-[42px] font-light mb-4">The Worship</h2>
     <p class="font-light text-xl text-balance">If you want to judge us based on our music — We have drums, keys, guitars, a cello, bass, and sometimes even a harmonica. But more important than the style of music — we're here to worship <strong>together</strong>, not to put on a performance.</p>
     <div class="flex items-end justify-around py-8 gap-3 w-full">
@@ -83,4 +83,25 @@
             <p class="font-hand text-lg leading-none">full of spit</p>
         </div>
     </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-4 py-4 sm:py-6 lg:py-20 text-center">
+    <h2 class="font-serif leading-none text-center text-2xl sm:text-3xl lg:text-[42px] font-light mb-4">Kids Ministry</h2>
+    <p class="font-light text-xl text-balance">During our Sunday morning service, we have a nursery for the littles and Sunday School classes for the bigs — <strong>up thru 5th grade</strong>. We love our kids. For all the older kids, they can (and do) enjoy the main service. Our teaching is great for all ages.</p>
+    <image-gallery orientation="horizontal">
+        <img src="{{ glide src="/assets/playground-slide.jpg" width="800" height="480" /}}" alt="Playground Slide" />
+        <img src="{{ glide src="/assets/kids-room.jpg" width="800" height="480" /}}" alt="Kids Room" />
+        <img src="{{ glide src="/assets/kids-circle.jpg" width="800" height="480" /}}" alt="Kids Circle" />
+    </image-gallery>
+</section>
+
+<section class="max-w-7xl mx-auto px-4 py-4 sm:py-6 lg:py-20 text-center">
+    <h2 class="font-serif leading-none text-center text-2xl sm:text-3xl lg:text-[42px] font-light mb-4">Small Groups</h2>
+    <p class="font-light text-xl text-balance">We call 'em "Care Groups" because they're the primary way we care for each other as a church. <strong>Christianity is a team sport</strong> — we're not meant to do this alone. We have groups that meet in homes all over the Ormond Beach area, from beachside to west of I-95.</p>
+    <image-gallery orientation="horizontal">
+        {{ glide src="/assets/care-group-1.jpg" width="800" height="480" }}<img src="{{ url }}" alt="{{ alt }}" />{{ /glide }}
+        {{ glide src="/assets/care-group-3.jpg" width="800" height="480" }}<img src="{{ url }}" alt="{{ alt }}" />{{ /glide }}
+        {{ glide src="/assets/care-group-4.jpg" width="800" height="480" }}<img src="{{ url }}" alt="{{ alt }}" />{{ /glide }}
+        {{ glide src="/assets/care-group-5.jpg" width="800" height="480" }}<img src="{{ url }}" alt="{{ alt }}" />{{ /glide }}
+    </image-gallery>
 </section>

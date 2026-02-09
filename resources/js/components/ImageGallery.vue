@@ -19,8 +19,8 @@
                 <img
                     :src="image.url"
                     :alt="image.alt || ''"
-                    class="rounded-3xl h-[400px] w-[240px] object-cover cursor-pointer transition-all duration-500"
-                    :class="isHovered(index) ? 'brightness-105' : ''"
+                    class="rounded-3xl object-cover cursor-pointer transition-all duration-500"
+                    :class="[sizeClass, isHovered(index) ? 'brightness-105' : '']"
                 />
             </div>
         </div>
@@ -31,7 +31,19 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
+
+const props = defineProps({
+    orientation: {
+        type: String,
+        required: false,
+        default: 'vertical'
+    }
+})
+
+const sizeClass = computed(() => {
+    return props.orientation === 'vertical' ? 'h-[400px] w-[240px]' : 'h-[240px] w-[400px]'
+})
 
 const slotContainer = ref(null)
 const normalizedImages = ref([])

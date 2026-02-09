@@ -4,5 +4,6 @@ blueprint: leadership
 title: 'Tom Tacker'
 position: Elder
 updated_by: 7081277f-8794-4f0c-a519-187db99b94ae
-updated_at: 1770341135
+updated_at: 1770614904
+headshot: leadership/tom-tacker.jpg
 ---
