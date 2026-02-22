@@ -8,6 +8,7 @@ updated_at: 1770309731
 hero_title: Media
 hero_background: jeff-preaching.jpg
 graffiti: media
+template: media
 page_builder:
   -
     id: ml9oorfq

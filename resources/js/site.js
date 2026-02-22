@@ -6,7 +6,10 @@ const app = createApp({})
 app.component('image-gallery', ImageGallery)
 
 // Mount app
-app.mount('#app')
+const vueRoot = document.querySelector('.vue')
+if (vueRoot) {
+    app.mount(vueRoot)
+}
 
 // Rough animation on the twos (hover only)
 document.addEventListener('DOMContentLoaded', () => {

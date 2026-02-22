@@ -27,7 +27,7 @@
         {{ /if }}
 
         {{ if type == "gallery" }}
-            <div class="py-4 sm:py-6 lg:py-8">
+            <div class="py-4 sm:py-6 lg:py-8 vue">
                 <image-gallery>
                     {{ gallery_images }}
                         <img src="{{ glide:url height="800" width="480" }}" alt="{{ alt }}" />
