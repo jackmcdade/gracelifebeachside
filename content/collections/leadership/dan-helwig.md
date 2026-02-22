@@ -4,5 +4,6 @@ blueprint: leadership
 title: 'Dan Helwig'
 position: Deacon
 updated_by: 7081277f-8794-4f0c-a519-187db99b94ae
-updated_at: 1770579121
+updated_at: 1771794576
+headshot: leadership/dan-helwig.jpg
 ---

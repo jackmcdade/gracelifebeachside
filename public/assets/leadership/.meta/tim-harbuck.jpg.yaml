@@ -1,7 +1,9 @@
-data: {  }
-size: 41185
-last_modified: 1770342461
-width: 500
-height: 333
+data:
+  alt: 'Tim Harbuck'
+  focus: 48-43-1.2
+size: 434581
+last_modified: 1771794112
+width: 1500
+height: 2000
 mime_type: image/jpeg
 duration: null

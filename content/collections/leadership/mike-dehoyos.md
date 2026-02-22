@@ -4,5 +4,6 @@ blueprint: leadership
 title: 'Mike DeHoyos'
 position: Deacon
 updated_by: 7081277f-8794-4f0c-a519-187db99b94ae
-updated_at: 1770579117
+updated_at: 1771794555
+headshot: leadership/mike-dehoyos.jpg
 ---

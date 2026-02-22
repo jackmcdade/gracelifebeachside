@@ -1,7 +1,9 @@
-data: {  }
-size: 84583
-last_modified: 1770342510
-width: 500
-height: 500
+data:
+  alt: 'Mike DeHoyos'
+  focus: 52-24-1.8
+size: 552778
+last_modified: 1771794168
+width: 1500
+height: 2000
 mime_type: image/jpeg
 duration: null

@@ -4,5 +4,6 @@ blueprint: leadership
 title: 'Jeff Eckert'
 position: 'Head Pastor'
 updated_by: 7081277f-8794-4f0c-a519-187db99b94ae
-updated_at: 1770341105
+updated_at: 1771794545
+headshot: leadership/jeff-eckert.jpg
 ---
