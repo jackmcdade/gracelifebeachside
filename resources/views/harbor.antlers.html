@@ -1,0 +1,64 @@
+<x-hero
+    :title="hero_title"
+    :graffiti="graffiti"
+    class="lg:h-[380px]"
+    :image="hero_background:url"
+>
+</x-hero>
+
+<div class="font-hand text-lg sm:text-xl lg:text-2xl mt-8 md:mt-16 text-center">What is the Harbor?</div>
+
+
+{{ partial:components/page-builder }}
+
+<section class="max-w-4xl mx-auto flex gap-4 items-center justify-center px-4 py-6 text-center">
+    <x-cta href="/what-we-believe">
+        {{ glide src="assets/harbor-thumb.jpg" width="250" height="140" }}
+            <img src="{{ url }}" alt="" class="h-full rounded-sm">
+        {{ /glide }}
+        {{ svg src="assets/icons/play-circle" class="size-4 text-stone-500" }}
+        <div class="text-left text-trim">
+            <div class="text-2xl font-semibold">Watch a video about it</div>
+            <p class="text-xl font-light leading-none">2 minutes and 33 seconds.</p>
+        </div>
+    </x-cta>
+    <x-cta href="/what-we-believe">
+        <img src="/assets/icons/clipboard.svg" alt="" class="h-16 ml-2">
+        <div class="text-left text-trim">
+            <div class="text-2xl font-semibold">Talk to a Counselor</div>
+            <p class="text-xl font-light leading-none">No cost, no commitment, no pressure.</p>
+        </div>
+    </x-cta>
+</section>
+
+<section class="max-w-3xl mx-auto text-3xl font-light py-16">
+    <h2 class="font-semibold text-balance">Our Counseling Heartbeat</h2>
+    <p class="mb-16">The gospel of Jesus Christ is the deepest and most durable source of hope for spiritual, mental, and emotional health. Grace sits at the very center of everything we do.</p>
+
+    <h2 class="font-semibold text-balance">Our Counseling Approach</h2>
+    <p class="mb-16">Counseling is most effective in the context of a trusted relationship. Therefore, we seek to treat every counselee as a fellow image-bearer to be cared for — never as a project to be fixed.</p>
+
+    <h2 class="font-semibold text-balance">Our Counseling Office</h2>
+    <p class="mb-16">Counseling best takes place outdoors, as we experience God's creation vibrations. By getting outside and soaking in the suns rays, we follow in footsteps of the greatest counselor of all - Jesus.</p>
+
+    <h2 class="font-semibold text-balance">Our Counseling Sweet Spot</h2>
+    <p class="mb-16">Wise counseling should be both biblically grounded and clinically informed — blending the timeless truth of the gospel with responsible insights from modern-day medical science.</p>
+</section>
+
+<section class="max-w-8xl mx-auto px-4 py-4 sm:py-6 py-16 text-center">
+    <h2 class="font-serif leading-none text-center text-2xl md:text-5xl font-light mb-4">
+        Meet just a few of our counselors.
+    </h2>
+    <div class="grid grid-cols-4 gap-3 max-w-5xl mx-auto py-16">
+        {{ collection:leadership }}
+            <button class="bg-white rounded-sm p-1.5 text-center shadow cursor-pointer hover:shadow-md hover:translate-y-[-3px] hover:translate-x-[-1px] hover:-rotate-1 even:hover:rotate-1 duration-100 hover:shadow-[4px_4px_0_hsla(220,29%,8%,0.1)] transition-all">
+                <img src="{{ glide:headshot width="300" height="300" }}" alt="{{ headshot:alt ?? title }}" class="w-full h-auto rounded-[1px]">
+                <div class="py-1">
+                    <h3 class="font-hand text-2xl leading-none">{{ title }}</h3>
+                    <p class="font-light leading-none">{{ position }}</p>
+                </div>
+            </button>
+        {{ /collection:leadership }}
+    </div>
+</section>
+
